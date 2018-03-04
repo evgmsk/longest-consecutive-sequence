@@ -5,10 +5,10 @@ module.exports = function longestConsecutiveLength(array, sort = false) {
 
     const hash = {};
 
-    // The fastest solution to pass all test
+    // The fastest solution to path all tests
     const theFastest = (array) => {
         const arr = array;
-        if(array[0] > array[1])
+        if(array[0] > array[1] || sort)
             arr.sort((a,b) => a-b);
         let [f, s] = [1, 1];
         for(let i = 1; i < length; i++){
